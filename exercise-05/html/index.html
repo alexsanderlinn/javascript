@@ -7,12 +7,50 @@
     <link rel="stylesheet" href="../css/style.css">
 </head>
 <body>
-    <h1>Iniciando estudo com DOM</h1>
-    <p>Aqui vai o resultado:</p>
-    <p>Aprendendo <strong>DOM</strong> em JavaScript.</p>
-    <div>Clique em mim</div>
+    <h1 id="title">Iniciando estudo com <strong class="bold">DOM</strong></h1>
+    <p name="resultado">Aqui vai o resultado:</p>
+    <p>Aprendendo <strong class="bold">DOM</strong> em JavaScript.</p>
+    <div id="msg">Clique em mim</div>
+    
     <script>
-
+        var p1 = window.document.getElementsByTagName('p')[1]
+        window.document.write('Está escrito assim: ' + p1.innerText + '<br>' +'atenção que não puxou o negrito do DOM.')
+        p1.style.color = 'blue'
+        window.document.write('<br>Então adicione a TAG: ' + p1.innerHTML)
+        var d = window.document.getElementById('msg') 
+        d.style.background = 'green'
+        d.innerText = 'Estou aguardando...'
+        var r = window.document.getElementsByName('resultado')[0]
+        r.innerText = 'Resultado: '
+        var c = window.document.getElementsByClassName('bold')[1]
+        c.style.background = 'black'
+        window.document.querySelector
+        var t = window.document.querySelector('h1#title')
+        t.style.background = 'grey'
+        var s = window.document.querySelector('strong.bold')
+        s.style.background = 'red'
     </script>
+<!-- 
+    <script>
+        var d = window.document.getElementById('msg')
+        d.innerText = 'Estou aguardando...'
+        window.document.getElementById('msg').innerText = 'Estou aguardando...'
+    </script>
+    <script>
+        var corpo = window.document.body
+        corpo.style.background = 'black'
+    </script>
+    <script>
+        window.document.write('hello! world')
+    </script>
+    <br>
+    <script>
+        window.document.write(window.navigator.appName)
+    </script>
+    <br>
+    <script>
+        window.document.write(window.document.URL)
+    </script> 
+-->
 </body>
 </html>
