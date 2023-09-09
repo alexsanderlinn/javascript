@@ -6,6 +6,7 @@ body {
     background-color: grey;
     line-height: 100px;
     text-align: center;
+    color: #ffffff;
 }
 input {
     font: normal 18pt 'Roboto Mono', monospace;
