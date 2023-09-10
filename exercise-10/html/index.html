@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detra </title>
+    <link rel="stylesheet" href="../css/style.css">
+    <script src="../js/script.js"></script>
+</head>
+<body>
+    <h1>Sistema de Multas</h1>
+    Velocidade do carro: <input type="number" name="txtvel" id="txtvel"> Km/h
+    <input type="button" value="Verificar" onclick="calcular">
+    <div id="res">
+
+    </div>
+
+    <script>
+        function calcular() {
+    var txtvel = window.document.querySelector('inout#txtvel')
+    var res = window.document.querySelector('div#res')
+    var vel = Number(txtvel.value)
+    res.innerHTML = `<p>Sua velocidade atual é de <strong>${vel}Km/h</strong></p>`
+    res.innerHTML +=`<p> Derija sempre com cinto de seguranção</p>`
+    }
+    </script>
+</body>
+</html>
