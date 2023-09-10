@@ -1,7 +1,11 @@
-function calcular() {
-    var txtvel = window.document.querySelector('inout#txtvel')
-    var res = window.document.querySelector('div#res')
-    var vel = Number(txtvel.value)
-    res.innerHTML = `<p>Sua velocidade atual é de <strong>${vel}Km/h</strong></p>`
-    res.innerHTML +=`<p> Derija sempre com sinto`
+function verificar() {
+    var nas = window.document.getElementById('nas').value
+    var res = window.document.getElementById('res')
+    if (nas === 'Brasil') {
+        res.innerHTML = 'Bem Vindo ao Brasil!'
+        res.innerHTML += `<p>Por favor vá para o balcão <strong>A1</strong><p>`
+    } else {
+        res.innerHTML = 'Welcome to Brazil!'
+        res.innerHTML += `<p>Please go to the <strong>B2</strong> counter</p>`
+    }
 }
