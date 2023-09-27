@@ -28,7 +28,7 @@
     }
 
 
-    setTimeout(function(){ location.reload(); }, 2000);
+    setTimeout(function(){ location.reload(); }, 1000);
 
 
     }
