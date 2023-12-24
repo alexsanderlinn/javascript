@@ -12,14 +12,15 @@
     </header>
     <section>
         <div>
-            <P id="start">Inicío: <input type="number"></P>
-            <p id="end">Fim: <input type="number"></p>
-            <p id="step">Passo: <input type="number"></p>
-            <button>Calcular</button>
+            <p>Inicío: <input type="number" id="startInput"></p>
+            <p>Fim: <input type="number" id="endInput"></p>
+            <p>Passo: <input type="number" id="stepInput"></p>
+            <button type="button" value="calcular" onclick="contagem()">Calcular</button> 
+            <button type="button" value="Refresh" onclick="refresh()">Atualizar</button>
             <hr>
         </div>
         <div>
-            <p id="sum">Preparando contagem...</p>
+            <p id="result">Preparando contagem...</p>
         </div>
     </section>
     <footer>
