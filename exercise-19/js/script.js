@@ -11,7 +11,7 @@ function loading() {
     // Para parar o carregamento após algum tempo (por exemplo, após 5 segundos).
     setTimeout(function() {
         clearInterval(intervaloCarregamento);
-        mensagem.innerHTML = 'Charging Complete!';
+        mensagem.innerHTML = 'Complete!';
         // Chama função de soma
         sum()
     }, 5000); // 5000 milissegundos (5 segundos).
