@@ -3,29 +3,45 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title></title>
+    <title>Calculadora</title>
     <link rel="stylesheet" href="../css/style.css">
 </head>
 <body>
-    <header>
-        <h1>Vamos contar</h1>
-    </header>
     <section>
-        <div>
-            <p>Inicío: <input type="number" id="startInput"></p>
-            <p>Fim: <input type="number" id="endInput"></p>
-            <p>Passo: <input type="number" id="stepInput"></p>
-            <button type="button" value="calcular" onclick="contagem()">Calcular</button> 
-            <button type="button" value="Refresh" onclick="refresh()">Atualizar</button>
-            <hr>
-        </div>
-        <div>
-            <p id="result">Preparando contagem...</p>
-        </div>
+        <header>
+            <div class="background-main" id="">
+                <h1>CALCULATING</h1>
+                <p class="cab">Please enter values</p>
+            </div>
+            <br>
+        </header>
+        <main>
+            <div class="background-main">
+                <input type="number" name="start" id="start-button" class="input">
+                <p class="leg">Start:</p>
+                <input type="number" name="end" id="end-button" class="input">
+                <p class="leg">End:</p>
+                <input type="number" name="step" id="step-button" class="input">
+                <p class="leg">Step:</p>
+                <button type="button" id="calculo" class="button" onclick="loading()">Sum</button>
+                <button type="button" id="refresh" class="button" onclick="refresh()">Refresh</button>
+            </div>
+            <br>
+            <div class="background-main" id="loading">
+                <p style="color: white; width: 500px; margin-top: 0px; margin-bottom: 0px;">.</p>
+            </div>
+            <br>
+            <div class="background-main" id="result">
+                <p style="color: white; width: 500px; margin-top: 0px; margin-bottom: 0px;">.</p>
+            </div>
+            <br>
+        </main>
+        <footer>
+            <div class="background-main">
+                <p class="dev">Developed by Alexsander Linn</link></p>
+            </div>
+        </footer>
     </section>
-    <footer>
-        <p>&copy;alexsander linn</p>
-    </footer>
     <script src="../js/script.js"></script>
 </body>
 </html>

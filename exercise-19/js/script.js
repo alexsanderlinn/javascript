@@ -1,28 +1,54 @@
-function contagem() {
-    var start = document.getElementById('startInput').value;
-    var end = document.getElementById('endInput').value;
-    var step = document.getElementById('stepInput').value;
+function loading() {
+    var mensagem = document.getElementById('loading');
+    var contagemPontos = 0;
 
-    var res = document.getElementById('result');
-    res.innerHTML = "";  // Limpa o conteúdo anterior
+    var intervaloCarregamento = setInterval(function() {
+        contagemPontos = (contagemPontos + 1) % 4; // 4 é o número de pontos desejado.
+        var pontos = Array(contagemPontos + 1).join('.');
+        mensagem.innerHTML = 'Loading' + pontos;
+    }, 500); // 500 milissegundos entre cada mudança.
 
-    // Verifica se os valores são válidos
-    if (isNaN(start) || isNaN(end) || isNaN(step)) {
-        res.innerHTML = "Por favor, insira números válidos.";
-        return;
-    }
+    // Para parar o carregamento após algum tempo (por exemplo, após 5 segundos).
+    setTimeout(function() {
+        clearInterval(intervaloCarregamento);
+        mensagem.innerHTML = 'Charging Complete!';
+        // Chama função de soma
+        sum()
+    }, 5000); // 5000 milissegundos (5 segundos).
 
-    // Inicializa uma variável para armazenar o valor atual
-    var current = start;
-
-    //Realiza a contagem
-    while (current <= end) {
-        res.innerHTML += `Passo ${current}<br>`;
-        current += step;
-    }
+    // Para iniciar o carregamento.
+    loading();
 }
 
-function refresh(){
-    //Atualiza a Pagina
-    location.reload()
+function sum() {
+    var start = parseInt(document.getElementById('start-button').value);
+    var end = parseInt(document.getElementById('end-button').value);
+    var step = parseInt(document.getElementById('step-button').value);
+
+    //Verificações dos números
+    if (isNaN(start) || isNaN(end) || isNaN(step) || step ===0){
+        res.innerHTML = `Please, enter valid numeric values and makes sure that the step is not zero.`
+    }
+
+    var current = start;
+    var resultText = '';  // Inicializa resultText para uma string vazia
+
+    while (current <= end) {
+        resultText += current;
+
+        // Adiciona uma vírgula se não for o último número
+        if (current + step <= end) {
+            resultText += ", ";
+        }
+
+        current = current + step;
+    }
+
+    // Resultado será mostrado
+    document.getElementById('result').innerHTML = `Sum: ${resultText}`;
+}
+
+
+function refresh() {
+    location.reload();
 }
