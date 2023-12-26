@@ -45,7 +45,7 @@ function sum() {
     }
 
     // Resultado será mostrado
-    document.getElementById('result').innerHTML = `Sum: ${resultText}`;
+    document.getElementById('result').innerHTML = `Result: ${resultText}`;
 }
 
 
