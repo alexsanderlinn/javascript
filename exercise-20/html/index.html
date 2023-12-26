@@ -3,24 +3,47 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Multiplication Table</title>
     <link rel="stylesheet" href="../css/style.css">
+    <link rel="shortcut icon" href="../image/favicon.ico" type="image/x-icon">
 </head>
 <body>
-    <header>
-        <h1></h1>
-    </header>
     <section>
-        <div>
-            
-        </div>
-        <div>
-            
-        </div>
+        <header>
+            <div class="background-main">
+                <h1>Multiplication Table</h1>
+            </div>
+        </header>
+        <main>
+                <div class="background-main">
+                    <input type="number" name="number" id="number-input" class="input">
+                    <p class="input-text">Please enter a number</p>
+                </div>
+                <div class="background-main">
+                    <button type="button" class="button" onclick="search()">Search</button>
+                    <button type="button" class="button" onclick="refresh()">Refresh</button>
+                </div>
+                <div class="background-main">
+                    <p class="result">Resultado</p>
+                    <p class="res0">.</p>
+                    <p class="res1">.</p>
+                    <p class="res2">.</p>
+                    <p class="res3">.</p>
+                    <p class="res4">.</p>
+                    <p class="res5">.</p>
+                    <p class="res6">.</p>
+                    <p class="res7">.</p>
+                    <p class="res8">.</p>
+                    <p class="res9">.</p>
+                    <p class="res10">.</p>
+                </div>
+        </main>
+        <footer>
+            <div class="background-main">
+                <p class="dev">Devoloping by Alexsander Linn</p>
+            </div>
+        </footer>
     </section>
-    <footer>
-        <p>&copy;alexsander linn</p>
-    </footer>
     <script src="../js/script.js"></script>
 </body>
 </html>
